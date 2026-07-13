@@ -1,0 +1,155 @@
+/* COLORS: black, gray, blue */
+:root {
+    --black: #0a0a0a;
+    --gray: #1f1f1f;
+    --light-gray: #dcdcdc;
+    --blue: #4da6ff;
+}
+
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--light-gray);
+    font-family: Akshar;
+}
+
+header {
+    position: relative;
+    z-index: 50;
+    padding: 10px 40px; /* adds space on left and right */
+}
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--blue);
+    text-transform: uppercase;
+    z-index: 20;
+}
+
+
+.hero {
+    position: relative;
+    z-index: 5; /* hero content above video */
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blue);
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+    text-align: center;
+}
+
+.hero-content h2,
+.hero-content h3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+
+
+/* Video background */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45; /* adjust brightness */
+    z-index: 1;
+}
+
+/* Dark overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 2;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+}
+
+
+.animate-text {
+    font-size: 48px;
+    color: var(--blue);
+}
+
+.delay {
+    transition-delay: 0.4s;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.section {
+    padding: 60px 70px;
+}
+
+
+.card {
+    background: var(--gray);
+    padding: 20px;
+    border-left: 4px solid var(--blue);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--gray);
+}
